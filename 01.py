@@ -34,8 +34,8 @@ VCF DUP记录修正工具
 安装依赖：
     pip install vcfpy pyfaidx
 
-作者：Auto
-日期：2024
+作者：zhangzhishuai
+日期：2025-12-16
 """
 
 import argparse
