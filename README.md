@@ -1,3 +1,4 @@
+# repair-sv-vcf-file-from-jasmine
 # VCF DUP 记录修正工具
 
 用于批量修正 VCF 文件中 ID 含指定关键词（默认 `DUP`）的记录，核心操作包括：
@@ -55,7 +56,6 @@ python3 01.py -i merged.vcf -o output.vcf -g /path/to/genome.fasta -k DUP
 4) 逐条写入输出 VCF  
 
 ## 注意事项
-- 请使用 `python3` 运行；`python` 可能指向 Python 2。  
 - 确认参考基因组染色体命名与 VCF 一致，否则会提示缺失并跳过该记录。  
 - 若输入 VCF 极大，可考虑压缩并索引，但当前脚本面向普通文本 VCF。  
 - ALT 设置为符号型等位基因 `<DUP>`；若后续工具有特殊要求，请按需调整。  
@@ -65,7 +65,4 @@ python3 01.py -i merged.vcf -o output.vcf -g /path/to/genome.fasta -k DUP
 - 核心函数：`process_vcf(input_vcf, output_vcf, genome_fasta, keyword="DUP")`  
 - 错误处理：缺失文件、缺失染色体会给出提示并退出或跳过记录。  
 
-## 许可
-内部使用示例脚本，如需发布请补充许可证声明。  
 
-# repair-sv-vcf-file-from-jasmine
